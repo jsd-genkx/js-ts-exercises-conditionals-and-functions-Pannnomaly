@@ -4,9 +4,9 @@
   "description": "```js\r Syntax:",
   "main": "index.js",
   "scripts": {
-    "start": "tsx task02.ts",
+    "start": "tsx task05.ts",
     "build": "tsc",
-    "dev": "tsx watch task02.ts"
+    "dev": "tsx watch task05.ts"
   },
   "repository": {
     "type": "git",
