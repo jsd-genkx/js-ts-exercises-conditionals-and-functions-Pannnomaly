@@ -1,0 +1,27 @@
+{
+  "name": "js-ts-exercises-conditionals-and-functions-pannnomaly",
+  "version": "1.0.0",
+  "description": "```js\r Syntax:",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx task02.ts",
+    "build": "tsc",
+    "dev": "tsx watch task02.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsd-genkx/js-ts-exercises-conditionals-and-functions-Pannnomaly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jsd-genkx/js-ts-exercises-conditionals-and-functions-Pannnomaly/issues"
+  },
+  "homepage": "https://github.com/jsd-genkx/js-ts-exercises-conditionals-and-functions-Pannnomaly#readme",
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
