@@ -6,23 +6,27 @@
 
 // TODO BONUS: Rewrite with if
 
-const num:number = 12;
-checkAndPrint(num);
+const num:number = 0;
 // console.log(num);
 
-if (num % 3 === 0 && num % 5 === 0)
+if (num === 0) // guard เช็คกัน 0
 {
-    console.log(`${num} => FizzBuzz`);
-} else if (num % 3 === 0)
+    console.log(`${num} is 0 ไม่เอา ไม่หารสิอุนเตอ\n`);
+} else if (num % 3 === 0 && num % 5 === 0) // condition เยอะและซ้อนทับกัน (ในนี้คือต้องหารทั้ง 3 และ 5 ลงตัว) เราให้ความสำคัญมากที่สุด
 {
-    console.log(`${num} => Fizz`);
+    console.log(`${num} => FizzBuzz\n`);
+} else if (num % 3 === 0) // ความสำคัญเท่าๆ กันกับ mod 5
+{
+    console.log(`${num} => Fizz\n`);
 } else if (num % 5 === 0)
 {
-    console.log(`${num} => Buzz`);
+    console.log(`${num} => Buzz\n`);
 } else 
 {
-    console.log(`${num} => Not divisible by 3 or 5`);
+    console.log(`${num} => Not divisible by 3 or 5\n`);
 }
+
+checkAndPrint(num);
 
 // แนวความคิดของโจทย์นี้คือ ต้องการตรวจสอบว่า ตัวเลขที่รับเข้ามานั้น สามารถหารด้วย 3 และ 5, 3, 5 หรือหารไม่ได้เลยหรือไม่ โดยมีเงื่อนไขดังนี้
 // ถ้าตัวเลขนั้นสามารถหารด้วย 3 และ 5 ลงตัว (num % 3 === 0 && num % 5 === 0) จะให้แสดงข้อความว่า "FizzBuzz"
@@ -34,24 +38,29 @@ if (num % 3 === 0 && num % 5 === 0)
 // Bonus
 function checkAndPrint (inputNumber:number)
 {
+    if (num === 0)
+    {
+        console.log(`Bonus: ${num} is 0 ไม่เอา ไม่หารสิอุนเตอ`);
+        return
+    }
     if (num % 3 === 0 && num % 5 === 0)
     {
-        console.log(`${num} => FizzBuzz`);
+        console.log(`Bonus: ${num} => FizzBuzz`);
         return;
     }
     if (num % 3 === 0)
     {
-        console.log(`${num} => Fizz`);
+        console.log(`Bonus: ${num} => Fizz`);
         return;
     }
     if (num % 5 === 0)
     {
-        console.log(`${num} => Buzz`);
+        console.log(`Bonus: ${num} => Buzz`);
         return;
     }
     if (!((num % 3 === 0 && num % 5 === 0) && (num % 3 === 0) && num % 5 === 0))
     {
-        console.log(`${num} => Not divisible by 3 or 5`);
+        console.log(`Bonus: ${num} => Not divisible by 3 or 5`);
         return;
     }
 }

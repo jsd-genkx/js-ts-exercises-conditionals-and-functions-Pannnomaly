@@ -7,10 +7,10 @@ const password:string = "12345678901";
 const passwordLength = password.length;
 // console.log(password);
 
-if (passwordLength > 10)
+if (passwordLength > 10) // passwordLength < 6
 {
     console.log(`Your password "${password}" is Strong!`);
-} else if (passwordLength >= 6 && passwordLength <= 10)
+} else if (passwordLength >= 6 && passwordLength <= 10) // ใช้ passwordLength <= 10 ก็ได้
 {
     console.log(`Your password "${password}" is Moderate!`);
 } else
