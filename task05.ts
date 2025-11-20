@@ -13,6 +13,7 @@ if (fruit === "apple") {
 	console.log("Unknown fruit.");
 }
 
+// switch (fruit.toLowerCase()) แบบนี้ก็ใช้ได้เหมือนกัน
 switch (fruit)
 {
 	case "apple":
