@@ -40,27 +40,27 @@ function checkAndPrint (inputNumber:number)
 {
     if (num === 0)
     {
-        console.log(`Bonus: ${num} is 0 ไม่เอา ไม่หารสิอุนเตอ`);
+        console.log(`Bonus: ${num} is 0 ไม่เอา ไม่หารสิอุนเตอ\n`);
         return
     }
     if (num % 3 === 0 && num % 5 === 0)
     {
-        console.log(`Bonus: ${num} => FizzBuzz`);
+        console.log(`Bonus: ${num} => FizzBuzz\n`);
         return;
     }
     if (num % 3 === 0)
     {
-        console.log(`Bonus: ${num} => Fizz`);
+        console.log(`Bonus: ${num} => Fizz\n`);
         return;
     }
     if (num % 5 === 0)
     {
-        console.log(`Bonus: ${num} => Buzz`);
+        console.log(`Bonus: ${num} => Buzz\n`);
         return;
     }
     if (!((num % 3 === 0 && num % 5 === 0) && (num % 3 === 0) && num % 5 === 0))
     {
-        console.log(`Bonus: ${num} => Not divisible by 3 or 5`);
+        console.log(`Bonus: ${num} => Not divisible by 3 or 5\n`);
         return;
     }
 }
@@ -68,3 +68,35 @@ function checkAndPrint (inputNumber:number)
 // โบนัสเป็นแบบใช้ if ล้วน เลยมีแนวคิดแบบนี้คือ ใช้ return เพื่อออกจากฟังก์ชันทันทีเมื่อเงื่อนไขใดเงื่อนไขหนึ่งเป็นจริง
 // ซึ่งจะช่วยลดการใช้งาน else if และ else ซึ่งทำให้โค้ดดูสะอาดและเข้าใจง่ายขึ้น
 // โดยแต่ละเงื่อนไขจะตรวจสอบแยกกันและถ้าเงื่อนไขใดเป็นจริง มันจะแสดงผลลัพธ์ที่เกี่ยวข้องแล้วจบการทำงานของฟังก์ชันทันที
+
+// const functionName = (parameter) => {statement}
+const fizzBuzz = (number: number) => {
+    if (number === 0)
+    {
+        console.log(`${number} is 0 ไม่เอา ไม่หารสิอุนเตอ\n`);
+    } else if (number % 3 === 0 && number % 5 === 0)
+    {
+        console.log(`${number} => FizzBuzz\n`);
+    } else if (number % 3 === 0)
+    {
+        console.log(`${number} => Fizz\n`);
+    } else if (number % 5 === 0)
+    {
+        console.log(`${number} => Buzz\n`);
+    } else 
+    {
+        console.log(`${number} => Not divisible by 3 or 5\n`);
+    }
+}
+
+fizzBuzz(5);
+// แบบนี้คือเราสามารถใช้ตัวแปรใหม่ในการเรียก function เก่าได้
+const fizzBuzz2 = fizzBuzz;
+// โดยการเรียกตัวแปรใหม่ ให้ไปเรียกตัวเก่าอีกที
+fizzBuzz2(5);
+
+// test case
+fizzBuzz(15); // "FizzBuzz"
+fizzBuzz(9); // "Fizz"
+fizzBuzz(10); // "Buzz"
+fizzBuzz(7); // "Not divisible by 3 or 5"
